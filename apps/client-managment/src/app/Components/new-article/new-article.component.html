@@ -1,0 +1,42 @@
+
+<div class="forms">
+
+        <div class="mb-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            {{Clientname}}
+            </button>
+            <ul class="dropdown-menu" >
+              <div *ngFor="let client of clients">
+                <li (click)="setClient(client._id,client.name)" *ngIf="client._id">{{client.name}}</li>
+              </div>
+            </ul>
+        </div>
+        </div>
+    
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Link</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="link">
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Status
+            </button>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="statuschange(true)">Yes</a></li>
+            <li><a class="dropdown-item" (click)="statuschange(false)">No</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Comment</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="comment">
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+
+</div>

@@ -3,6 +3,9 @@
   "version": 2,
   "projects": {
     "client-managment": "apps/client-managment",
-    "client-managment-e2e": "apps/client-managment-e2e"
+    "client-managment-e2e": "apps/client-managment-e2e",
+    "client-view": "apps/client-view",
+    "client-view-e2e": "apps/client-view-e2e",
+    "shared-lib": "libs/shared-lib"
   }
 }

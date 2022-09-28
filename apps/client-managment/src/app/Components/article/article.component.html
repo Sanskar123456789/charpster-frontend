@@ -1,0 +1,32 @@
+<div class="Article">
+  <button type="button" class="btn btn-info" routerLink="NewArticle">Add</button>
+  <br><br>
+    <table class="table" >
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">#</th>
+            <th scope="col">Client</th>
+            <th scope="col">Status</th>
+            <th scope="col">Link</th>
+            <th scope="col">Comment</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        
+        <tbody *ngFor="let client of clients">
+            
+                  <tr *ngFor="let article of client.article">
+                  <th scope="row">{{article.Id}}</th>
+                  <td>{{client.name}}</td>
+                  <td>{{article.status}}</td>
+                  <td>{{article.link}}</td>
+                  <td>{{article.comment}}</td>
+                  <td>       
+                    <button type="button" class="btn btn-danger" (click)="deleteArticle(article._id)" *ngIf="article._id">Delete</button>
+                  </td>
+                </tr>
+            
+        </tbody>
+
+      </table>
+</div>
