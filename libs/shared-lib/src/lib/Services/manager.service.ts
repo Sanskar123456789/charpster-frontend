@@ -8,7 +8,8 @@ import { manager } from '../Models/manager';
 })
 export class ManagerService {
 
-  api = "http://localhost:3000/api/manager"
+  // api = "http://localhost:3000/api/manager";
+  api = "https://charpster.herokuapp.com/api/manager";
   
   constructor(private http : HttpClient) { }
 

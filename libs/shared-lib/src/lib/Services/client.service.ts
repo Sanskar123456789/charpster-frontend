@@ -10,7 +10,9 @@ import { article } from '../Models/article';
 })
 export class ClientService {
 
-  api = "http://localhost:3000/api/client"
+  // api = "http://localhost:3000/api/client"
+
+  api = "https://charpster.herokuapp.com/api/client";
 
   constructor(private http : HttpClient) { }
 
